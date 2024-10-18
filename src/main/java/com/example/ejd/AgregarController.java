@@ -62,6 +62,7 @@ public class AgregarController {
         }
 
         Persona nuevaPersona = new Persona(nombre, apellidos, edad);
+        mostrarAlertaExito("Info", "Persona añadida correctamente");
         helloController.agregarPersonaTabla(nuevaPersona);
 
         Stage stage = (Stage) btnGuardar.getScene().getWindow();
@@ -72,6 +73,14 @@ public class AgregarController {
     void cancelar(ActionEvent event) {
         Stage stage = (Stage) btnCancelar.getScene().getWindow();
         stage.close();
+    }
+
+    private void mostrarAlertaExito(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 
     private void mostrarAlertaError(String titulo, String mensaje) {
