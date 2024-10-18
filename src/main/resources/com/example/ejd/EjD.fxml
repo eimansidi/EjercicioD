@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejd.HelloController">
+    <TableView fx:id="tableView" prefHeight="350.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="nombre" prefWidth="250.0" text="Nombre" />
+            <TableColumn fx:id="apellidos" prefWidth="250.0" text="Apellidos" />
+            <TableColumn fx:id="edad" prefWidth="100.0" text="Edad" />
+        </columns>
+    </TableView>
+    <Button fx:id="agregar" onAction="#agregar" prefWidth="150.0" text="Agregar persona">
+      <VBox.margin>
+         <Insets left="225.0" top="10.0" />
+      </VBox.margin></Button>
+</VBox>
